@@ -16,4 +16,9 @@ router.get('/health', function(req, res) {
     res.json({message: 'API is healthy!'});   
 });
 
+router.post('/oauth', function(req, res) {
+	logger.info({request_body: req.body}, 'Received request');
+    res.json({message: 'Welcome to OAUTH'});   
+});
+
 module.exports = router;
