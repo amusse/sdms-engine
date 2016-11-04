@@ -34,18 +34,20 @@ router.get('/oauth', function(req, res) {
 			redirect_uri: redirectUrl,
 			code: code
 		};
-		request({url: url, qs: params}, function(err, response, body) {
+		request({url: url, qs: params, json: true}, function(err, response, body) {
 			if (err) { 
 				logger.info({url: url, params: params}, 'Request failed!');
 				res.json({message: 'User verification failed!'});
 			} else if (res.statusCode == 200) {
 				logger.info({body: body}, 'Response received');
-				var accessToken = body.AccessToken;
-				var userId = body.UserID;
-				var refreshToken = body.RefreshToken;
-				var accessTokenExpireTime = body.Expires;
-				var refreshTokenExpireTime = body.RefreshTokenExpires;
-				res.json({message: 'User verification succeeded!'});
+				var output = {
+					accessToken: body.AccessToken,
+					userId: body.UserID,
+					refreshToken: body.RefreshToken,
+					accessTokenExpireTime: body.Expires,
+					refreshTokenExpireTime: body.RefreshTokenExpireTime
+				};
+				res.json({message: output});
 			} else {
 				res.json({message: 'User verification failed!'});
 			}
