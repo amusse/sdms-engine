@@ -45,7 +45,7 @@ router.get('/oauth', function(req, res) {
 					userId: body.UserID,
 					refreshToken: body.RefreshToken,
 					accessTokenExpireTime: body.Expires,
-					refreshTokenExpireTime: body.RefreshTokenExpireTime
+					refreshTokenExpireTime: body.RefreshTokenExpires
 				};
 				res.json({message: output});
 			} else {
