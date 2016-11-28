@@ -5,6 +5,7 @@
 var router = require('express').Router();
 var request = require('request');
 var bunyan = require('bunyan');
+var config = require('./config');
 var logger = bunyan.createLogger({name: "SDMS-Routes", src: true});
 
 router.get('/', function(req, res) {
@@ -17,17 +18,17 @@ router.get('/health', function(req, res) {
     res.json({message: 'API is healthy!'});   
 });
 
-router.get('/oauth', function(req, res) {
+router.get('/oauth/ihealth', function(req, res) {
 	logger.info({request_query: req.query}, 'Received request');
 	var code = req.query.code;
 	if (!code) {
 		res.json({message: 'User verification failed!'});
 	} else {
-		var url = 'https://api.ihealthlabs.com:8443/OpenApiV2/OAuthv2/userauthorization/';
-		var clientId = '2919ba70fea043ddb1c85fdbfdaa20ae';
-		var clientSecret = 'd096af91d05c4994bc1230c13b9bd87e';
-		var redirectUrl = 'http://96418cba.ngrok.io/api/oauth/';
-		var params = { 
+		var url = config.ihealth.oauthUrl;
+		var clientId = config.ihealth.clientId;
+		var clientSecret = config.ihealth.clientSecret;
+		var redirectUrl = config.ihealth.redirectUrl;
+		var params = {
 			client_id: clientId, 
 			client_secret: clientSecret,
 			grant_type: 'authorization_code',
@@ -53,6 +54,11 @@ router.get('/oauth', function(req, res) {
 			}
 		});
 	}
+});
+
+router.get('/oauth/spire', function(req, res) {
+	logger.info({request_query: req.query}, 'Received request');
+	var code = req.query.code;
 });
 
 module.exports = router;
