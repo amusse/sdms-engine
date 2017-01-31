@@ -5,6 +5,8 @@
 var router = require('express').Router();
 var request = require('request');
 var bunyan = require('bunyan');
+var NodeCache = require('node-cache');
+var cache = new NodeCache();
 var config = require('./config');
 var logger = bunyan.createLogger({name: "SDMS-Routes", src: true});
 
@@ -60,5 +62,48 @@ router.get('/oauth/spire', function(req, res) {
 	logger.info({request_query: req.query}, 'Received request');
 	var code = req.query.code;
 });
+
+router.post('/data', function(req, res, body) {
+	logger.info({requestBody: req.body}, 'Received data');
+	if (requestBody) {
+		addToCache(requestBody)
+	}
+	res.json({res: 'success'});
+});
+
+// After receiving post request, store data in cache
+function addToCache(data) {
+	var gsr = data.GSR;
+	if (gsr) {
+		cache.get('GSR', function(err, value) {
+			if (value) {
+				value.concat(gsr);
+			} else {
+				cache.set("GSR", gsr);
+			}
+		});
+	}
+	var bvp = data.BVP;
+	if (bvp) {
+		cache.get('BVP', function(err, value) {
+			if (value) {
+				value.concat(bvp);
+			} else {
+				cache.set('BVP', bvp);
+			}
+		});
+	}
+	var ibi = data.IBI;
+	if (ibi) {
+		cache.get('IBI', function(err, value) {
+			if (value) {
+				value.concat(ibi);
+			} else {
+				cache.set('IBI', ibi);
+			}
+		});
+	}
+	logger.info('Caching data');
+}
 
 module.exports = router;
