@@ -1,0 +1,14 @@
+{
+  "ihealth": {
+    "clientId": "2919ba70fea043ddb1c85fdbfdaa20ae",
+    "clientSecret": "d096af91d05c4994bc1230c13b9bd87e",
+    "redirectUrl": "http://b5e49b34.ngrok.io/api/oauth/ihealth",
+    "ouathUrl": "https://api.ihealthlabs.com:8443/OpenApiV2/OAuthv2/userauthorization/"
+   },
+   "spire": {
+    "clientId": "061b41aaa25745266cba9fb5661e12284b10dd8541ef92d73f7cd5428fe6ff3b",
+    "clientSecret": "d5708fc05281d052e8680bf4fe9cb433c2b14f284041827b3c8d8f9b3edb4ab8",
+    "redirectUrl": "https://b5e49b34.ngrok.io/api/oauth/spire",
+    "accessToken": "bedab6996ed05e8f642461b1fa9809463a4280c027f3b4a466c223494c12db78"
+  }
+}
