@@ -11,9 +11,14 @@ import threading
 import time
 import pickle
 import numpy as np
+
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier, BaggingClassifier, AdaBoostClassifier
+
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve
 from sklearn.model_selection import GridSearchCV
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
@@ -88,7 +93,7 @@ def split_train_val_test(matrix, targets, part):
 	total_samples = len(matrix) 
 
 	# Number of phases in data set
-	num_phases = 8
+	num_phases = 7
 	num_features = 60
 
 	if part == 'part1':
@@ -526,7 +531,7 @@ def create_feature_matrix(path):
 	phase_length = 4 * 60 
 
 	# Number of total phases
-	num_phases = 8
+	num_phases = 7
 
 	# Total number of samples
 	total_num_samples = int((phase_length - window_size)/t_lapse) * num_phases
@@ -601,7 +606,7 @@ def create_feature_matrix_part2(path):
 	phase_length = 2 * 60 
 
 	# Number of total phases
-	num_phases = 8
+	num_phases = 7
 
 	# Samples per phase
 	samples_per_phase = int((phase_length - window_size)/t_lapse) # 9
@@ -665,16 +670,28 @@ def create_feature_matrix_part2(path):
 
 # This function tests the individual model
 def test_individual_model():
-	svm_accuracies = np.zeros(0)
-	nn5_accuracies = np.zeros(0)
-
+	
 	svm_val_accuracies = np.zeros(0)
+	svm_test_accuracies = np.zeros(0)
 	svm_testw_accuracies = np.zeros(0)
 
-	nn5_val_accuracies = np.zeros(0)
-	nn5_testw_accuracies = np.zeros(0)
+	nn10_val_accuracies = np.zeros(0)
+	nn10_test_accuracies = np.zeros(0)
+	nn10_testw_accuracies = np.zeros(0)
+	
+	lr_val_accuracies = np.zeros(0)
+	lr_test_accuracies = np.zeros(0)
+	lr_testw_accuracies = np.zeros(0)
 
-	start_test = 1
+	rf_val_accuracies = np.zeros(0)
+	rf_test_accuracies = np.zeros(0)
+	rf_testw_accuracies = np.zeros(0)
+
+	boost_val_accuracies = np.zeros(0)
+	boost_test_accuracies = np.zeros(0)
+	boost_testw_accuracies = np.zeros(0)
+
+	start_test = 3
 	end_test = 7
 
 	for i in range(start_test, end_test + 1):
@@ -710,7 +727,7 @@ def test_individual_model():
 			row_index = row_index + 1
 
 		k = 40
-		components = 10
+		components = 37
 		threshold = 10.0
 
 		train_matrix, validation_matrix, test_matrix, num_features = \
@@ -719,6 +736,9 @@ def test_individual_model():
 		perform_pca(train_matrix, validation_matrix, test_matrix, components)
 		train_matrix, validation_matrix, test_matrix, num_features = \
 		perform_thresholding(train_matrix, validation_matrix, test_matrix, threshold)
+
+		old_train = train_matrix
+		old_targets = train_targets
 
 		clf = SVC(kernel='linear')
 		clf.fit(train_matrix, train_targets)
@@ -729,6 +749,7 @@ def test_individual_model():
 		test_accuracy = accuracy_score(test_targets, y_test)
 		print "SVM Linear Kernel Validation Accuracy: " + str(validation_accuracy)
 		print "SVM Linear Kernel Test Accuracy: " + str(test_accuracy)
+		svm_test_accuracies = np.append(svm_test_accuracies, test_accuracy)
 		svm_val_accuracies = np.append(svm_val_accuracies, validation_accuracy)
 
 		train_matrix = np.vstack((train_matrix, validation_matrix))
@@ -738,14 +759,180 @@ def test_individual_model():
 		y_test = clf.predict(test_matrix)
 
 		test_accuracy = accuracy_score(test_targets, y_test)
-		svm_testw_accuracies = np.append(svm_testw_accuracies, test_accuracy)
 		print "SVM Linear Kernel Test Accuracy w/Val: " + str(test_accuracy)
+		svm_testw_accuracies = np.append(svm_testw_accuracies, test_accuracy)
 
-	print "Average SMV Linear Kernel Test Accuracy: ", str(np.mean(svm_accuracies))
+		train_matrix = old_train
+		train_targets = old_targets
+
+
+		clf = KNeighborsClassifier(n_neighbors=5)
+		clf.fit(train_matrix, train_targets)
+		y_val = clf.predict(validation_matrix)
+		y_test = clf.predict(test_matrix)
+
+		validation_accuracy  = accuracy_score(validation_targets, y_val)
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "10 Nearest Neighbors Validation Accuracy: " + str(validation_accuracy)
+		print "10 Nearest Neighbors Test Accuracy: " + str(test_accuracy)
+		nn10_test_accuracies = np.append(nn10_test_accuracies, test_accuracy)
+		nn10_val_accuracies = np.append(nn10_val_accuracies, validation_accuracy)
+
+		train_matrix = np.vstack((train_matrix, validation_matrix))
+		train_targets = np.append(train_targets, validation_targets)
+		clf = KNeighborsClassifier(n_neighbors=10)
+		clf.fit(train_matrix, train_targets)
+		y_test = clf.predict(test_matrix)
+
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "10 Nearest Neighbors Test Accuracy w/Val: " + str(test_accuracy)
+		nn10_testw_accuracies = np.append(nn10_testw_accuracies, test_accuracy)
+
+		train_matrix = old_train
+		train_targets = old_targets
+
+
+		clf = LogisticRegression()
+		clf.fit(train_matrix, train_targets)
+		y_val = clf.predict(validation_matrix)
+		y_test = clf.predict(test_matrix)
+
+		validation_accuracy  = accuracy_score(validation_targets, y_val)
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Logistic Regression Validation Accuracy: " + str(validation_accuracy)
+		print "Logistic Regression Test Accuracy: " + str(test_accuracy)
+		lr_test_accuracies = np.append(lr_test_accuracies, test_accuracy)
+		lr_val_accuracies = np.append(lr_val_accuracies, validation_accuracy)
+
+		train_matrix = np.vstack((train_matrix, validation_matrix))
+		train_targets = np.append(train_targets, validation_targets)
+		clf = LogisticRegression()
+		clf.fit(train_matrix, train_targets)
+		y_test = clf.predict(test_matrix)
+
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Logistic Regression Test Accuracy w/Val: " + str(test_accuracy)
+		lr_testw_accuracies = np.append(lr_testw_accuracies, test_accuracy)
+
+		train_matrix = old_train
+		train_targets = old_targets
+
+
+		clf = RandomForestClassifier()
+		clf.fit(train_matrix, train_targets)
+		y_val = clf.predict(validation_matrix)
+		y_test = clf.predict(test_matrix)
+
+		validation_accuracy  = accuracy_score(validation_targets, y_val)
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Random Forest Validation Accuracy: " + str(validation_accuracy)
+		print "Random Forest Test Accuracy: " + str(test_accuracy)
+		rf_test_accuracies = np.append(rf_test_accuracies, test_accuracy)
+		rf_val_accuracies = np.append(rf_val_accuracies, validation_accuracy)
+
+		train_matrix = np.vstack((train_matrix, validation_matrix))
+		train_targets = np.append(train_targets, validation_targets)
+
+		clf = RandomForestClassifier()
+		clf.fit(train_matrix, train_targets)
+		y_test = clf.predict(test_matrix)
+
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Logistic Regression Test Accuracy w/Val: " + str(test_accuracy)
+		rf_testw_accuracies = np.append(rf_testw_accuracies, test_accuracy)
+
+		train_matrix = old_train
+		train_targets = old_targets
+
+		clf = RandomForestClassifier()
+		clf.fit(train_matrix, train_targets)
+		y_val = clf.predict(validation_matrix)
+		y_test = clf.predict(test_matrix)
+
+		validation_accuracy  = accuracy_score(validation_targets, y_val)
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Random Forest Validation Accuracy: " + str(validation_accuracy)
+		print "Random Forest Test Accuracy: " + str(test_accuracy)
+		rf_test_accuracies = np.append(rf_test_accuracies, test_accuracy)
+		rf_val_accuracies = np.append(rf_val_accuracies, validation_accuracy)
+
+		train_matrix = np.vstack((train_matrix, validation_matrix))
+		train_targets = np.append(train_targets, validation_targets)
+		clf = RandomForestClassifier()
+		clf.fit(train_matrix, train_targets)
+		y_test = clf.predict(test_matrix)
+
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Random Forest Test Accuracy w/Val: " + str(test_accuracy)
+		rf_testw_accuracies = np.append(rf_testw_accuracies, test_accuracy)
+
+		train_matrix = old_train
+		train_targets = old_targets
+
+		row_index = 0
+		for row in train_matrix:
+			col_index = 0
+			for col in row:
+				if col < 0:
+					train_matrix[row_index, col_index] = abs(col)
+				col_index = col_index + 1
+			row_index = row_index + 1
+
+		clf = AdaBoostClassifier(base_estimator=MultinomialNB())
+		clf.fit(train_matrix, train_targets)
+		y_val = clf.predict(validation_matrix)
+		y_test = clf.predict(test_matrix)
+
+		validation_accuracy  = accuracy_score(validation_targets, y_val)
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Boosting Validation Accuracy: " + str(validation_accuracy)
+		print "Boosting Test Accuracy: " + str(test_accuracy)
+		boost_test_accuracies = np.append(boost_test_accuracies, test_accuracy)
+		boost_val_accuracies = np.append(boost_val_accuracies, validation_accuracy)
+
+		train_matrix = np.vstack((train_matrix, validation_matrix))
+		train_targets = np.append(train_targets, validation_targets)
+
+		row_index = 0
+		for row in train_matrix:
+			col_index = 0
+			for col in row:
+				if col < 0:
+					train_matrix[row_index, col_index] = abs(col)
+				col_index = col_index + 1
+			row_index = row_index + 1
+
+		clf = AdaBoostClassifier(base_estimator=SVC(kernel='linear', probability=True))
+		clf.fit(train_matrix, train_targets)
+		y_test = clf.predict(test_matrix)
+
+		test_accuracy = accuracy_score(test_targets, y_test)
+		print "Boosting Test Accuracy w/Val: " + str(test_accuracy)
+		boost_testw_accuracies = np.append(boost_testw_accuracies, test_accuracy)
+
+		train_matrix = old_train
+		train_targets = old_targets
+
+		
+	print "Average SMV Linear Kernel Test Accuracy: ", str(np.mean(svm_test_accuracies))
 	print "Average SVM Linear Validation Accuracy: ", str(np.mean(svm_val_accuracies))
 	print "Average SVM Linear Testw Accuracy: ", str(np.mean(svm_testw_accuracies))
 
+	print "Average 10 Nearest Neighbor Test Accuracy: ", str(np.mean(nn10_test_accuracies))
+	print "Average 10 Nearest Neighbor Validation Accuracy: ", str(np.mean(nn10_val_accuracies))
+	print "Average 10 Nearest Neighbor Testw Accuracy: ", str(np.mean(nn10_testw_accuracies))
 
+	print "Average Logsitic Regression Test Accuracy: ", str(np.mean(lr_test_accuracies))
+	print "Average Logsitic Regression Validation Accuracy: ", str(np.mean(lr_val_accuracies))
+	print "Average Logsitic Regression Testw Accuracy: ", str(np.mean(lr_testw_accuracies))
+
+	print "Average Random Forest Test Accuracy: ", str(np.mean(rf_test_accuracies))
+	print "Average Random Forest Validation Accuracy: ", str(np.mean(rf_val_accuracies))
+	print "Average Random Forest Testw Accuracy: ", str(np.mean(rf_testw_accuracies))
+
+	print "Average Boosting Test Accuracy: ", str(np.mean(boost_test_accuracies))
+	print "Average Boosting Validation Accuracy: ", str(np.mean(boost_val_accuracies))
+	print "Average Boosting Testw Accuracy: ", str(np.mean(boost_testw_accuracies))
 
 
 # This function combines all training sets to build general model
@@ -765,9 +952,9 @@ def build_general_model():
 			directory = path + "/test0" + str(i)
 		else:
 			directory = path + "/test" + str(i)
-
+		print "Adding Test: ", i
 		train_matrix, train_targets = create_feature_matrix(directory)
-		
+
 		general_train_matrix = np.vstack((general_train_matrix, train_matrix))
 		general_train_targets = np.append(general_train_targets, train_targets)
 
@@ -800,7 +987,19 @@ def build_general_model():
 	clf = SVC(kernel='linear')
 	clf.fit(train_matrix, train_targets)
 
-	with open('./data/svml_model.pkl', 'wb') as f:
+	with open('./data/svm_model.pkl', 'wb') as f:
+		pickle.dump(clf, f)
+
+	clf = LogisticRegression()
+	clf.fit(train_matrix, train_targets)
+
+	with open('./data/lr_model.pkl', 'wb') as f:
+		pickle.dump(clf, f)
+
+	clf = RandomForestClassifier()
+	clf.fit(train_matrix, train_targets)
+
+	with open('./data/rf_model.pkl', 'wb') as f:
 		pickle.dump(clf, f)
 
 # This function tests the new subjects data on general model
@@ -810,7 +1009,35 @@ def test_classifier(test_id):
 
 	# Load saved models, if they exist
 	try:
-		clf = pickle.load(open('./data/svml_model.pkl', 'rb'))
+		clf = pickle.load(open('./data/svm_model.pkl', 'rb'))
+	except (OSError, IOError) as e:
+		sys.stderr.write('Read Error: Could not read machine learning model\n')
+		return NOT_STRESSED
+
+	print "Detailed classification report:"
+	y_true, y_pred = test_targets, clf.predict(test_matrix)
+	print(classification_report(y_true, y_pred))
+	print "Confusion Matrix:"
+	print(confusion_matrix(y_true, y_pred))
+	print "Accuracy Score:"
+	print(accuracy_score(y_true, y_pred))
+
+	try:
+		clf = pickle.load(open('./data/lr_model.pkl', 'rb'))
+	except (OSError, IOError) as e:
+		sys.stderr.write('Read Error: Could not read machine learning model\n')
+		return NOT_STRESSED
+
+	print "Detailed classification report:"
+	y_true, y_pred = test_targets, clf.predict(test_matrix)
+	print(classification_report(y_true, y_pred))
+	print "Confusion Matrix:"
+	print(confusion_matrix(y_true, y_pred))
+	print "Accuracy Score:"
+	print(accuracy_score(y_true, y_pred))
+
+	try:
+		clf = pickle.load(open('./data/rf_model.pkl', 'rb'))
 	except (OSError, IOError) as e:
 		sys.stderr.write('Read Error: Could not read machine learning model\n')
 		return NOT_STRESSED
