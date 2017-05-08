@@ -1,0 +1,6 @@
+framework module Pods_dStress__Train_Tests {
+  umbrella header "Pods-dStress (Train)Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A26BA5AD8DA372B72DA7344 /* Pods_dStress__Train_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD19E096828E95F76B37FD18 /* Pods_dStress__Train_Tests.framework */; };
+		2E2373567C1093DE840B1070 /* Pods_dStress__Train_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A90EB5B1A7C6E779D98967 /* Pods_dStress__Train_UITests.framework */; };
+		922BA96A8891245B0BA6D314 /* Pods_dStress__Train_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EFD50B08C69BA1966A35AF /* Pods_dStress__Train_.framework */; };
+		E2D378391E88D7B90010BD43 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378381E88D7B90010BD43 /* MediaPlayer.framework */; };
+		E2D3783B1E88D7C30010BD43 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D3783A1E88D7C30010BD43 /* SystemConfiguration.framework */; };
+		E2D3783D1E88D7CC0010BD43 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D3783C1E88D7CC0010BD43 /* Accelerate.framework */; };
+		E2D3783F1E88D7D80010BD43 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D3783E1E88D7D80010BD43 /* ExternalAccessory.framework */; };
+		E2D378411E88D7E40010BD43 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378401E88D7E40010BD43 /* CoreBluetooth.framework */; };
+		E2D378431E88D7F00010BD43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378421E88D7F00010BD43 /* CoreGraphics.framework */; };
+		E2D378451E88D7FB0010BD43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378441E88D7FB0010BD43 /* UIKit.framework */; };
+		E2D378471E88D8000010BD43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378461E88D8000010BD43 /* Foundation.framework */; };
+		E2D378491E88D8330010BD43 /* iHealthSDK2.0.7.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D378481E88D8330010BD43 /* iHealthSDK2.0.7.1.a */; };
+		E2D378911E8DEECD0010BD43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D378901E8DEECD0010BD43 /* Constants.swift */; };
+		E2DCE7881E386EC20023D451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCE7871E386EC20023D451 /* AppDelegate.swift */; };
+		E2DCE78A1E386EC20023D451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCE7891E386EC20023D451 /* ViewController.swift */; };
+		E2DCE78D1E386EC20023D451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DCE78B1E386EC20023D451 /* Main.storyboard */; };
+		E2DCE7901E386EC20023D451 /* dStress.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2DCE78E1E386EC20023D451 /* dStress.xcdatamodeld */; };
+		E2DCE7921E386EC20023D451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2DCE7911E386EC20023D451 /* Assets.xcassets */; };
+		E2DCE7951E386EC20023D451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DCE7931E386EC20023D451 /* LaunchScreen.storyboard */; };
+		E2DCE7A01E386EC20023D451 /* dStressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCE79F1E386EC20023D451 /* dStressTests.swift */; };
+		E2DCE7AB1E386EC20023D451 /* dStressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCE7AA1E386EC20023D451 /* dStressUITests.swift */; };
+		E2DCE7BC1E3873AA0023D451 /* EmpaLink-ios-0.7-full.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DCE7BB1E3873AA0023D451 /* EmpaLink-ios-0.7-full.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2DCE79C1E386EC20023D451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2DCE77C1E386EC20023D451 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DCE7831E386EC20023D451;
+			remoteInfo = dStress;
+		};
+		E2DCE7A71E386EC20023D451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2DCE77C1E386EC20023D451 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DCE7831E386EC20023D451;
+			remoteInfo = dStress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C2D591D86A0DCFA71965139 /* Pods-dStress (Train)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)Tests/Pods-dStress (Train)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		38AF24FFF7F9E64155D9B60C /* Pods-dStress (Train)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)UITests/Pods-dStress (Train)UITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A17F0BF8171A9C378CF1125 /* Pods-dStress (Train)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)Tests/Pods-dStress (Train)Tests.release.xcconfig"; sourceTree = "<group>"; };
+		79E66F097DD79DC8C88C98C8 /* Pods-dStress (Train).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train).debug.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)/Pods-dStress (Train).debug.xcconfig"; sourceTree = "<group>"; };
+		87A63E4D1C0BAFA0A62824BC /* Pods-dStress (Train).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train).release.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)/Pods-dStress (Train).release.xcconfig"; sourceTree = "<group>"; };
+		92EFD50B08C69BA1966A35AF /* Pods_dStress__Train_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dStress__Train_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A90EB5B1A7C6E779D98967 /* Pods_dStress__Train_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dStress__Train_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99417A655C753DF6A9D85C06 /* Pods-dStress (Train)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dStress (Train)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dStress (Train)UITests/Pods-dStress (Train)UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E23D0B5F1E524020002A70D5 /* dStress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dStress.entitlements; sourceTree = "<group>"; };
+		E2D378381E88D7B90010BD43 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E2D3783A1E88D7C30010BD43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E2D3783C1E88D7CC0010BD43 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		E2D3783E1E88D7D80010BD43 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		E2D378401E88D7E40010BD43 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E2D378421E88D7F00010BD43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E2D378441E88D7FB0010BD43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E2D378461E88D8000010BD43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2D378481E88D8330010BD43 /* iHealthSDK2.0.7.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iHealthSDK2.0.7.1.a; sourceTree = "<group>"; };
+		E2D3784A1E88D86B0010BD43 /* ABI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABI.h; sourceTree = "<group>"; };
+		E2D3784B1E88D86B0010BD43 /* ABIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABIController.h; sourceTree = "<group>"; };
+		E2D3784C1E88D86B0010BD43 /* ABPM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABPM.h; sourceTree = "<group>"; };
+		E2D3784D1E88D86B0010BD43 /* ABPMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABPMController.h; sourceTree = "<group>"; };
+		E2D3784E1E88D86B0010BD43 /* AM3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3.h; sourceTree = "<group>"; };
+		E2D3784F1E88D86B0010BD43 /* AM3Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3Controller.h; sourceTree = "<group>"; };
+		E2D378501E88D86B0010BD43 /* AM3S_V2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3S_V2.h; sourceTree = "<group>"; };
+		E2D378511E88D86B0010BD43 /* AM3S.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3S.h; sourceTree = "<group>"; };
+		E2D378521E88D86B0010BD43 /* AM3SController_V2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3SController_V2.h; sourceTree = "<group>"; };
+		E2D378531E88D86B0010BD43 /* AM3SController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM3SController.h; sourceTree = "<group>"; };
+		E2D378541E88D86B0010BD43 /* AM4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM4.h; sourceTree = "<group>"; };
+		E2D378551E88D86B0010BD43 /* AM4Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AM4Controller.h; sourceTree = "<group>"; };
+		E2D378561E88D86B0010BD43 /* AMHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMHeader.h; sourceTree = "<group>"; };
+		E2D378571E88D86B0010BD43 /* AMMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMMacroFile.h; sourceTree = "<group>"; };
+		E2D378581E88D86B0010BD43 /* AudioBasicCommunication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioBasicCommunication.h; sourceTree = "<group>"; };
+		E2D378591E88D86B0010BD43 /* BaseBG1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseBG1.h; sourceTree = "<group>"; };
+		E2D3785A1E88D86B0010BD43 /* BG1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG1.h; sourceTree = "<group>"; };
+		E2D3785B1E88D86B0010BD43 /* BG1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG1Controller.h; sourceTree = "<group>"; };
+		E2D3785C1E88D86B0010BD43 /* BG1NewClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG1NewClass.h; sourceTree = "<group>"; };
+		E2D3785D1E88D86B0010BD43 /* BG3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG3.h; sourceTree = "<group>"; };
+		E2D3785E1E88D86B0010BD43 /* BG3Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG3Controller.h; sourceTree = "<group>"; };
+		E2D3785F1E88D86B0010BD43 /* BG5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG5.h; sourceTree = "<group>"; };
+		E2D378601E88D86B0010BD43 /* BG5Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG5Controller.h; sourceTree = "<group>"; };
+		E2D378611E88D86B0010BD43 /* BG5L.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG5L.h; sourceTree = "<group>"; };
+		E2D378621E88D86B0010BD43 /* BG5LController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BG5LController.h; sourceTree = "<group>"; };
+		E2D378631E88D86B0010BD43 /* BGHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGHeader.h; sourceTree = "<group>"; };
+		E2D378641E88D86B0010BD43 /* BGMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGMacroFile.h; sourceTree = "<group>"; };
+		E2D378651E88D86B0010BD43 /* BP3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP3.h; sourceTree = "<group>"; };
+		E2D378661E88D86B0010BD43 /* BP3Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP3Controller.h; sourceTree = "<group>"; };
+		E2D378671E88D86B0010BD43 /* BP3L.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP3L.h; sourceTree = "<group>"; };
+		E2D378681E88D86B0010BD43 /* BP3LController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP3LController.h; sourceTree = "<group>"; };
+		E2D378691E88D86B0010BD43 /* BP5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP5.h; sourceTree = "<group>"; };
+		E2D3786A1E88D86B0010BD43 /* BP5Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP5Controller.h; sourceTree = "<group>"; };
+		E2D3786B1E88D86B0010BD43 /* BP7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP7.h; sourceTree = "<group>"; };
+		E2D3786C1E88D86B0010BD43 /* BP7Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP7Controller.h; sourceTree = "<group>"; };
+		E2D3786D1E88D86B0010BD43 /* BP7S.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP7S.h; sourceTree = "<group>"; };
+		E2D3786E1E88D86B0010BD43 /* BP7SController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BP7SController.h; sourceTree = "<group>"; };
+		E2D3786F1E88D86B0010BD43 /* BPHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPHeader.h; sourceTree = "<group>"; };
+		E2D378701E88D86B0010BD43 /* BPMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMacroFile.h; sourceTree = "<group>"; };
+		E2D378711E88D86B0010BD43 /* ConnectDeviceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectDeviceController.h; sourceTree = "<group>"; };
+		E2D378721E88D86B0010BD43 /* HealthHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthHeader.h; sourceTree = "<group>"; };
+		E2D378731E88D86B0010BD43 /* HealthUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthUser.h; sourceTree = "<group>"; };
+		E2D378741E88D86B0010BD43 /* HS3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS3.h; sourceTree = "<group>"; };
+		E2D378751E88D86B0010BD43 /* HS3Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS3Controller.h; sourceTree = "<group>"; };
+		E2D378761E88D86B0010BD43 /* HS4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS4.h; sourceTree = "<group>"; };
+		E2D378771E88D86B0010BD43 /* HS4Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS4Controller.h; sourceTree = "<group>"; };
+		E2D378781E88D86B0010BD43 /* HS5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS5.h; sourceTree = "<group>"; };
+		E2D378791E88D86B0010BD43 /* HS5Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HS5Controller.h; sourceTree = "<group>"; };
+		E2D3787A1E88D86B0010BD43 /* HSHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSHeader.h; sourceTree = "<group>"; };
+		E2D3787B1E88D86B0010BD43 /* HSMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSMacroFile.h; sourceTree = "<group>"; };
+		E2D3787C1E88D86B0010BD43 /* HTS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTS.h; sourceTree = "<group>"; };
+		E2D3787D1E88D86B0010BD43 /* HTSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTSController.h; sourceTree = "<group>"; };
+		E2D3787E1E88D86B0010BD43 /* HTSHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTSHeader.h; sourceTree = "<group>"; };
+		E2D3787F1E88D86B0010BD43 /* HTSMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTSMacroFile.h; sourceTree = "<group>"; };
+		E2D378801E88D86B0010BD43 /* iHealthHS6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHealthHS6.h; sourceTree = "<group>"; };
+		E2D378811E88D86B0010BD43 /* KD723.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD723.h; sourceTree = "<group>"; };
+		E2D378821E88D86B0010BD43 /* KD723Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD723Controller.h; sourceTree = "<group>"; };
+		E2D378831E88D86B0010BD43 /* KD926.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD926.h; sourceTree = "<group>"; };
+		E2D378841E88D86B0010BD43 /* KD926Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD926Controller.h; sourceTree = "<group>"; };
+		E2D378851E88D86B0010BD43 /* KN550BT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KN550BT.h; sourceTree = "<group>"; };
+		E2D378861E88D86B0010BD43 /* KN550BTController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KN550BTController.h; sourceTree = "<group>"; };
+		E2D378871E88D86B0010BD43 /* ManageDeviceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageDeviceController.h; sourceTree = "<group>"; };
+		E2D378881E88D86B0010BD43 /* NewAudioBasicCommunication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewAudioBasicCommunication.h; sourceTree = "<group>"; };
+		E2D378891E88D86B0010BD43 /* PO3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PO3.h; sourceTree = "<group>"; };
+		E2D3788A1E88D86B0010BD43 /* PO3Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PO3Controller.h; sourceTree = "<group>"; };
+		E2D3788B1E88D86B0010BD43 /* POHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POHeader.h; sourceTree = "<group>"; };
+		E2D3788C1E88D86B0010BD43 /* POMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POMacroFile.h; sourceTree = "<group>"; };
+		E2D3788D1E88D86B0010BD43 /* ScanDeviceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDeviceController.h; sourceTree = "<group>"; };
+		E2D3788E1E88D86B0010BD43 /* SDKUpdateDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKUpdateDevice.h; sourceTree = "<group>"; };
+		E2D378901E8DEECD0010BD43 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E2DCE7841E386EC20023D451 /* dStress (Train).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dStress (Train).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DCE7871E386EC20023D451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2DCE7891E386EC20023D451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "/Users/Ahmed/Documents/dStress (Train)/dStress (Train)/ViewController.swift"; sourceTree = "<absolute>"; };
+		E2DCE78C1E386EC20023D451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2DCE78F1E386EC20023D451 /* dStress.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dStress.xcdatamodel; sourceTree = "<group>"; };
+		E2DCE7911E386EC20023D451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2DCE7941E386EC20023D451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2DCE7961E386EC20023D451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DCE79B1E386EC20023D451 /* dStress (Train)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dStress (Train)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DCE79F1E386EC20023D451 /* dStressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dStressTests.swift; sourceTree = "<group>"; };
+		E2DCE7A11E386EC20023D451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DCE7A61E386EC20023D451 /* dStress (Train)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dStress (Train)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DCE7AA1E386EC20023D451 /* dStressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dStressUITests.swift; sourceTree = "<group>"; };
+		E2DCE7AC1E386EC20023D451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DCE7B91E3873880023D451 /* dStress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dStress; sourceTree = "<group>"; };
+		E2DCE7BB1E3873AA0023D451 /* EmpaLink-ios-0.7-full.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "EmpaLink-ios-0.7-full.framework"; sourceTree = "<group>"; };
+		E2DCE7BD1E3874E40023D451 /* dStress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dStress-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD19E096828E95F76B37FD18 /* Pods_dStress__Train_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dStress__Train_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2DCE7811E386EC20023D451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D378491E88D8330010BD43 /* iHealthSDK2.0.7.1.a in Frameworks */,
+				E2D378471E88D8000010BD43 /* Foundation.framework in Frameworks */,
+				E2D378451E88D7FB0010BD43 /* UIKit.framework in Frameworks */,
+				E2D378431E88D7F00010BD43 /* CoreGraphics.framework in Frameworks */,
+				E2D378411E88D7E40010BD43 /* CoreBluetooth.framework in Frameworks */,
+				E2D3783F1E88D7D80010BD43 /* ExternalAccessory.framework in Frameworks */,
+				E2D3783D1E88D7CC0010BD43 /* Accelerate.framework in Frameworks */,
+				E2D3783B1E88D7C30010BD43 /* SystemConfiguration.framework in Frameworks */,
+				E2D378391E88D7B90010BD43 /* MediaPlayer.framework in Frameworks */,
+				E2DCE7BC1E3873AA0023D451 /* EmpaLink-ios-0.7-full.framework in Frameworks */,
+				922BA96A8891245B0BA6D314 /* Pods_dStress__Train_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7981E386EC20023D451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A26BA5AD8DA372B72DA7344 /* Pods_dStress__Train_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7A31E386EC20023D451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2373567C1093DE840B1070 /* Pods_dStress__Train_UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2D3788F1E88D87C0010BD43 /* iHealth */ = {
+			isa = PBXGroup;
+			children = (
+				E2D3784A1E88D86B0010BD43 /* ABI.h */,
+				E2D3784B1E88D86B0010BD43 /* ABIController.h */,
+				E2D3784C1E88D86B0010BD43 /* ABPM.h */,
+				E2D3784D1E88D86B0010BD43 /* ABPMController.h */,
+				E2D3784E1E88D86B0010BD43 /* AM3.h */,
+				E2D3784F1E88D86B0010BD43 /* AM3Controller.h */,
+				E2D378501E88D86B0010BD43 /* AM3S_V2.h */,
+				E2D378511E88D86B0010BD43 /* AM3S.h */,
+				E2D378521E88D86B0010BD43 /* AM3SController_V2.h */,
+				E2D378531E88D86B0010BD43 /* AM3SController.h */,
+				E2D378541E88D86B0010BD43 /* AM4.h */,
+				E2D378551E88D86B0010BD43 /* AM4Controller.h */,
+				E2D378561E88D86B0010BD43 /* AMHeader.h */,
+				E2D378571E88D86B0010BD43 /* AMMacroFile.h */,
+				E2D378581E88D86B0010BD43 /* AudioBasicCommunication.h */,
+				E2D378591E88D86B0010BD43 /* BaseBG1.h */,
+				E2D3785A1E88D86B0010BD43 /* BG1.h */,
+				E2D3785B1E88D86B0010BD43 /* BG1Controller.h */,
+				E2D3785C1E88D86B0010BD43 /* BG1NewClass.h */,
+				E2D3785D1E88D86B0010BD43 /* BG3.h */,
+				E2D3785E1E88D86B0010BD43 /* BG3Controller.h */,
+				E2D3785F1E88D86B0010BD43 /* BG5.h */,
+				E2D378601E88D86B0010BD43 /* BG5Controller.h */,
+				E2D378611E88D86B0010BD43 /* BG5L.h */,
+				E2D378621E88D86B0010BD43 /* BG5LController.h */,
+				E2D378631E88D86B0010BD43 /* BGHeader.h */,
+				E2D378641E88D86B0010BD43 /* BGMacroFile.h */,
+				E2D378651E88D86B0010BD43 /* BP3.h */,
+				E2D378661E88D86B0010BD43 /* BP3Controller.h */,
+				E2D378671E88D86B0010BD43 /* BP3L.h */,
+				E2D378681E88D86B0010BD43 /* BP3LController.h */,
+				E2D378691E88D86B0010BD43 /* BP5.h */,
+				E2D3786A1E88D86B0010BD43 /* BP5Controller.h */,
+				E2D3786B1E88D86B0010BD43 /* BP7.h */,
+				E2D3786C1E88D86B0010BD43 /* BP7Controller.h */,
+				E2D3786D1E88D86B0010BD43 /* BP7S.h */,
+				E2D3786E1E88D86B0010BD43 /* BP7SController.h */,
+				E2D3786F1E88D86B0010BD43 /* BPHeader.h */,
+				E2D378701E88D86B0010BD43 /* BPMacroFile.h */,
+				E2D378711E88D86B0010BD43 /* ConnectDeviceController.h */,
+				E2D378721E88D86B0010BD43 /* HealthHeader.h */,
+				E2D378731E88D86B0010BD43 /* HealthUser.h */,
+				E2D378741E88D86B0010BD43 /* HS3.h */,
+				E2D378751E88D86B0010BD43 /* HS3Controller.h */,
+				E2D378761E88D86B0010BD43 /* HS4.h */,
+				E2D378771E88D86B0010BD43 /* HS4Controller.h */,
+				E2D378781E88D86B0010BD43 /* HS5.h */,
+				E2D378791E88D86B0010BD43 /* HS5Controller.h */,
+				E2D3787A1E88D86B0010BD43 /* HSHeader.h */,
+				E2D3787B1E88D86B0010BD43 /* HSMacroFile.h */,
+				E2D3787C1E88D86B0010BD43 /* HTS.h */,
+				E2D3787D1E88D86B0010BD43 /* HTSController.h */,
+				E2D3787E1E88D86B0010BD43 /* HTSHeader.h */,
+				E2D3787F1E88D86B0010BD43 /* HTSMacroFile.h */,
+				E2D378801E88D86B0010BD43 /* iHealthHS6.h */,
+				E2D378811E88D86B0010BD43 /* KD723.h */,
+				E2D378821E88D86B0010BD43 /* KD723Controller.h */,
+				E2D378831E88D86B0010BD43 /* KD926.h */,
+				E2D378841E88D86B0010BD43 /* KD926Controller.h */,
+				E2D378851E88D86B0010BD43 /* KN550BT.h */,
+				E2D378861E88D86B0010BD43 /* KN550BTController.h */,
+				E2D378871E88D86B0010BD43 /* ManageDeviceController.h */,
+				E2D378881E88D86B0010BD43 /* NewAudioBasicCommunication.h */,
+				E2D378891E88D86B0010BD43 /* PO3.h */,
+				E2D3788A1E88D86B0010BD43 /* PO3Controller.h */,
+				E2D3788B1E88D86B0010BD43 /* POHeader.h */,
+				E2D3788C1E88D86B0010BD43 /* POMacroFile.h */,
+				E2D3788D1E88D86B0010BD43 /* ScanDeviceController.h */,
+				E2D3788E1E88D86B0010BD43 /* SDKUpdateDevice.h */,
+			);
+			name = iHealth;
+			sourceTree = "<group>";
+		};
+		E2DCE77B1E386EC20023D451 = {
+			isa = PBXGroup;
+			children = (
+				E2DCE7861E386EC20023D451 /* dStress (Train) */,
+				E2DCE79E1E386EC20023D451 /* dStress (Train)Tests */,
+				E2DCE7A91E386EC20023D451 /* dStress (Train)UITests */,
+				E2DCE7851E386EC20023D451 /* Products */,
+				E2DCE7B81E3873870023D451 /* Frameworks */,
+				E58B501AAD7005ED064C6B5A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		E2DCE7851E386EC20023D451 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCE7841E386EC20023D451 /* dStress (Train).app */,
+				E2DCE79B1E386EC20023D451 /* dStress (Train)Tests.xctest */,
+				E2DCE7A61E386EC20023D451 /* dStress (Train)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2DCE7861E386EC20023D451 /* dStress (Train) */ = {
+			isa = PBXGroup;
+			children = (
+				E23D0B5F1E524020002A70D5 /* dStress.entitlements */,
+				E2D3788F1E88D87C0010BD43 /* iHealth */,
+				E2DCE7871E386EC20023D451 /* AppDelegate.swift */,
+				E2DCE7891E386EC20023D451 /* ViewController.swift */,
+				E2D378901E8DEECD0010BD43 /* Constants.swift */,
+				E2DCE78B1E386EC20023D451 /* Main.storyboard */,
+				E2DCE7911E386EC20023D451 /* Assets.xcassets */,
+				E2DCE7931E386EC20023D451 /* LaunchScreen.storyboard */,
+				E2DCE7961E386EC20023D451 /* Info.plist */,
+				E2DCE78E1E386EC20023D451 /* dStress.xcdatamodeld */,
+				E2DCE7BD1E3874E40023D451 /* dStress-Bridging-Header.h */,
+			);
+			name = "dStress (Train)";
+			path = "/Users/Ahmed/Documents/dStress (Train)/dStress (Train)";
+			sourceTree = "<absolute>";
+		};
+		E2DCE79E1E386EC20023D451 /* dStress (Train)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCE79F1E386EC20023D451 /* dStressTests.swift */,
+				E2DCE7A11E386EC20023D451 /* Info.plist */,
+			);
+			path = "dStress (Train)Tests";
+			sourceTree = "<group>";
+		};
+		E2DCE7A91E386EC20023D451 /* dStress (Train)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCE7AA1E386EC20023D451 /* dStressUITests.swift */,
+				E2DCE7AC1E386EC20023D451 /* Info.plist */,
+			);
+			path = "dStress (Train)UITests";
+			sourceTree = "<group>";
+		};
+		E2DCE7B81E3873870023D451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2D378481E88D8330010BD43 /* iHealthSDK2.0.7.1.a */,
+				E2D378461E88D8000010BD43 /* Foundation.framework */,
+				E2D378441E88D7FB0010BD43 /* UIKit.framework */,
+				E2D378421E88D7F00010BD43 /* CoreGraphics.framework */,
+				E2D378401E88D7E40010BD43 /* CoreBluetooth.framework */,
+				E2D3783E1E88D7D80010BD43 /* ExternalAccessory.framework */,
+				E2D3783C1E88D7CC0010BD43 /* Accelerate.framework */,
+				E2D3783A1E88D7C30010BD43 /* SystemConfiguration.framework */,
+				E2D378381E88D7B90010BD43 /* MediaPlayer.framework */,
+				E2DCE7BB1E3873AA0023D451 /* EmpaLink-ios-0.7-full.framework */,
+				E2DCE7B91E3873880023D451 /* dStress */,
+				92EFD50B08C69BA1966A35AF /* Pods_dStress__Train_.framework */,
+				FD19E096828E95F76B37FD18 /* Pods_dStress__Train_Tests.framework */,
+				93A90EB5B1A7C6E779D98967 /* Pods_dStress__Train_UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E58B501AAD7005ED064C6B5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79E66F097DD79DC8C88C98C8 /* Pods-dStress (Train).debug.xcconfig */,
+				87A63E4D1C0BAFA0A62824BC /* Pods-dStress (Train).release.xcconfig */,
+				0C2D591D86A0DCFA71965139 /* Pods-dStress (Train)Tests.debug.xcconfig */,
+				3A17F0BF8171A9C378CF1125 /* Pods-dStress (Train)Tests.release.xcconfig */,
+				99417A655C753DF6A9D85C06 /* Pods-dStress (Train)UITests.debug.xcconfig */,
+				38AF24FFF7F9E64155D9B60C /* Pods-dStress (Train)UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2DCE7831E386EC20023D451 /* dStress (Train) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DCE7AF1E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)" */;
+			buildPhases = (
+				DA95AEA1C6A36977A583F749 /* [CP] Check Pods Manifest.lock */,
+				E2DCE7801E386EC20023D451 /* Sources */,
+				E2DCE7811E386EC20023D451 /* Frameworks */,
+				E2DCE7821E386EC20023D451 /* Resources */,
+				08EB096395FCE33A04F478BC /* [CP] Embed Pods Frameworks */,
+				DF8959A95B76A35736078350 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dStress (Train)";
+			productName = dStress;
+			productReference = E2DCE7841E386EC20023D451 /* dStress (Train).app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2DCE79A1E386EC20023D451 /* dStress (Train)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DCE7B21E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)Tests" */;
+			buildPhases = (
+				DABF2C5D1D0A9238A78CD03C /* [CP] Check Pods Manifest.lock */,
+				E2DCE7971E386EC20023D451 /* Sources */,
+				E2DCE7981E386EC20023D451 /* Frameworks */,
+				E2DCE7991E386EC20023D451 /* Resources */,
+				973491687B7BBE3E8C5F4BC4 /* [CP] Embed Pods Frameworks */,
+				DA019840D2ACD728ABB2C84F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2DCE79D1E386EC20023D451 /* PBXTargetDependency */,
+			);
+			name = "dStress (Train)Tests";
+			productName = dStressTests;
+			productReference = E2DCE79B1E386EC20023D451 /* dStress (Train)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2DCE7A51E386EC20023D451 /* dStress (Train)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DCE7B51E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)UITests" */;
+			buildPhases = (
+				5E0B44F54B86E311CE28DFE9 /* [CP] Check Pods Manifest.lock */,
+				E2DCE7A21E386EC20023D451 /* Sources */,
+				E2DCE7A31E386EC20023D451 /* Frameworks */,
+				E2DCE7A41E386EC20023D451 /* Resources */,
+				A0E9FFED78C1F6147F95DFC6 /* [CP] Embed Pods Frameworks */,
+				BB1E4E1F9EF8BD09A54762E9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2DCE7A81E386EC20023D451 /* PBXTargetDependency */,
+			);
+			name = "dStress (Train)UITests";
+			productName = dStressUITests;
+			productReference = E2DCE7A61E386EC20023D451 /* dStress (Train)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2DCE77C1E386EC20023D451 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = RAN;
+				TargetAttributes = {
+					E2DCE7831E386EC20023D451 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NZ8SAPA6G5;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					E2DCE79A1E386EC20023D451 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8324953WX9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2DCE7831E386EC20023D451;
+					};
+					E2DCE7A51E386EC20023D451 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8324953WX9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2DCE7831E386EC20023D451;
+					};
+				};
+			};
+			buildConfigurationList = E2DCE77F1E386EC20023D451 /* Build configuration list for PBXProject "dStress (Train)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2DCE77B1E386EC20023D451;
+			productRefGroup = E2DCE7851E386EC20023D451 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2DCE7831E386EC20023D451 /* dStress (Train) */,
+				E2DCE79A1E386EC20023D451 /* dStress (Train)Tests */,
+				E2DCE7A51E386EC20023D451 /* dStress (Train)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2DCE7821E386EC20023D451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DCE7951E386EC20023D451 /* LaunchScreen.storyboard in Resources */,
+				E2DCE7921E386EC20023D451 /* Assets.xcassets in Resources */,
+				E2DCE78D1E386EC20023D451 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7991E386EC20023D451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7A41E386EC20023D451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08EB096395FCE33A04F478BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)/Pods-dStress (Train)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0B44F54B86E311CE28DFE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		973491687B7BBE3E8C5F4BC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)Tests/Pods-dStress (Train)Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E9FFED78C1F6147F95DFC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)UITests/Pods-dStress (Train)UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB1E4E1F9EF8BD09A54762E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)UITests/Pods-dStress (Train)UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA019840D2ACD728ABB2C84F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)Tests/Pods-dStress (Train)Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA95AEA1C6A36977A583F749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DABF2C5D1D0A9238A78CD03C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8959A95B76A35736078350 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dStress (Train)/Pods-dStress (Train)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2DCE7801E386EC20023D451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DCE78A1E386EC20023D451 /* ViewController.swift in Sources */,
+				E2DCE7901E386EC20023D451 /* dStress.xcdatamodeld in Sources */,
+				E2DCE7881E386EC20023D451 /* AppDelegate.swift in Sources */,
+				E2D378911E8DEECD0010BD43 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7971E386EC20023D451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DCE7A01E386EC20023D451 /* dStressTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DCE7A21E386EC20023D451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DCE7AB1E386EC20023D451 /* dStressUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2DCE79D1E386EC20023D451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DCE7831E386EC20023D451 /* dStress (Train) */;
+			targetProxy = E2DCE79C1E386EC20023D451 /* PBXContainerItemProxy */;
+		};
+		E2DCE7A81E386EC20023D451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DCE7831E386EC20023D451 /* dStress (Train) */;
+			targetProxy = E2DCE7A71E386EC20023D451 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2DCE78B1E386EC20023D451 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DCE78C1E386EC20023D451 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DCE7931E386EC20023D451 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DCE7941E386EC20023D451 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2DCE7AD1E386EC20023D451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2DCE7AE1E386EC20023D451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2DCE7B01E386EC20023D451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E66F097DD79DC8C88C98C8 /* Pods-dStress (Train).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NZ8SAPA6G5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "dStress (Train)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RAN.dStress-Train";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dStress (Train)/dStress-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E2DCE7B11E386EC20023D451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A63E4D1C0BAFA0A62824BC /* Pods-dStress (Train).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NZ8SAPA6G5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "dStress (Train)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RAN.dStress-Train";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dStress (Train)/dStress-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E2DCE7B31E386EC20023D451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2D591D86A0DCFA71965139 /* Pods-dStress (Train)Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8324953WX9;
+				INFOPLIST_FILE = dStressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RAN.dStressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dStress (Train).app/dStress (Train)";
+			};
+			name = Debug;
+		};
+		E2DCE7B41E386EC20023D451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A17F0BF8171A9C378CF1125 /* Pods-dStress (Train)Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8324953WX9;
+				INFOPLIST_FILE = dStressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RAN.dStressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dStress (Train).app/dStress (Train)";
+			};
+			name = Release;
+		};
+		E2DCE7B61E386EC20023D451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99417A655C753DF6A9D85C06 /* Pods-dStress (Train)UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8324953WX9;
+				INFOPLIST_FILE = dStressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RAN.dStressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = dStress;
+			};
+			name = Debug;
+		};
+		E2DCE7B71E386EC20023D451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38AF24FFF7F9E64155D9B60C /* Pods-dStress (Train)UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8324953WX9;
+				INFOPLIST_FILE = dStressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RAN.dStressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = dStress;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2DCE77F1E386EC20023D451 /* Build configuration list for PBXProject "dStress (Train)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DCE7AD1E386EC20023D451 /* Debug */,
+				E2DCE7AE1E386EC20023D451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DCE7AF1E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DCE7B01E386EC20023D451 /* Debug */,
+				E2DCE7B11E386EC20023D451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DCE7B21E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DCE7B31E386EC20023D451 /* Debug */,
+				E2DCE7B41E386EC20023D451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DCE7B51E386EC20023D451 /* Build configuration list for PBXNativeTarget "dStress (Train)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DCE7B61E386EC20023D451 /* Debug */,
+				E2DCE7B71E386EC20023D451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2DCE78E1E386EC20023D451 /* dStress.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2DCE78F1E386EC20023D451 /* dStress.xcdatamodel */,
+			);
+			currentVersion = E2DCE78F1E386EC20023D451 /* dStress.xcdatamodel */;
+			path = dStress.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2DCE77C1E386EC20023D451 /* Project object */;
+}
